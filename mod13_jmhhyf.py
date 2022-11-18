@@ -1,13 +1,6 @@
 import unittest
 from datetime import datetime
 
-symbol = "GOOG"
-chart_type = "1"
-time_series = "3"
-date_format = "%Y-%m-%d"
-start_date = "2021-09-23"
-end_date = "2021-10-23"
-
 class symbol_Test(unittest.TestCase):
     def test_capitalized(self):
         self.assertTrue(symbol.isupper())
@@ -40,6 +33,12 @@ class end_date_Test(unittest.TestCase):
     def test_dateType(self):
         self.assertTrue(datetime.strptime(end_date, date_format))
 
+symbol = "GOOG"
+chart_type = "1"
+time_series = "3"
+date_format = "%Y-%m-%d"
+start_date = "2021-09-23"
+end_date = "2021-10-23"
 
 if __name__ == '__main__':
     unittest.main()
